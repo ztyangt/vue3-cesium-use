@@ -1,0 +1,5 @@
+@media (min-width: 960px) {
+    .item.grid-4[data-v-f5090ebe] {
+        width: calc(100% / 2) !important;
+    }
+}
