@@ -1,6 +1,13 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "shared/**/*.ts",
+    "unplugin/auto-imports.d.ts"
+  ],
   "exclude": ["packages/**/__tests__/*", "demo", "tsc-types"],
   "compilerOptions": {
     "composite": true,

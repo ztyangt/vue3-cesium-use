@@ -9,6 +9,9 @@ import autoprefixer from 'autoprefixer'
 import copy from 'rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
 import pkg from './packages/package.json'
+import AutoImport from 'unplugin-auto-import/vite'
+import cesium from 'vite-plugin-cesium'
+
 // @ts-ignore
 import { terser } from 'rollup-plugin-terser'
 
@@ -19,8 +22,21 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./packages', import.meta.url))
     }
   },
+  server: {
+    host: '0.0.0.0',
+    port: 4000
+  },
   plugins: [
     vue(),
+    AutoImport({
+      imports: ['vue'],
+      dts: 'unplugin/auto-imports.d.ts',
+      dirs: ['packages/tools', 'packages/hooks/**/', 'shared/utils'],
+      resolvers: []
+    }),
+    cesium({
+      rebuildCesium: true
+    }),
     dts({
       rollupTypes: false,
       outDir: ['packages/dist/dist/@types'],

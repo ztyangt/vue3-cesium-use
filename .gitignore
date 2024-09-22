@@ -13,6 +13,7 @@ dist
 dist-demo
 dist-docs
 dist-ssr
+unplugin
 coverage
 *.local
 

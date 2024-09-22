@@ -6,15 +6,20 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
+    redirect: { name: 'Hooks' }
+  },
+  {
+    path: '/hooks',
+    name: 'Hooks',
     component: Layout,
-    redirect: { name: 'demo-test' },
+    redirect: { name: 'useViewer' },
     children: [
       {
-        path: '/test',
-        name: 'demo-test',
-        component: () => import('../views/test.vue'),
+        path: 'use-viewer',
+        name: 'useViewer',
+        component: () => import('../views/hooks/use-viewer.vue'),
         meta: {
-          title: '测试页面'
+          title: 'useViewer'
         }
       }
     ]

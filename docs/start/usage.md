@@ -25,4 +25,4 @@ $ yarn install vue3-cesium-use
 
 :::
 
-## 自动引入
+## 使用示例
