@@ -31,7 +31,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue'],
+      // imports: ['vue'],
       dts: 'unplugin/auto-imports.d.ts',
       dirs: ['packages/tools', 'packages/hooks/**/', 'shared/utils'],
       resolvers: []

@@ -16,8 +16,8 @@ export const viteConfig = {
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./packages', import.meta.url)),
-      '@docs': fileURLToPath(new URL('./docs/.vitepress', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '~/': `${path.resolve(__dirname, '.')}/`
     }
   },
   server: {
@@ -25,4 +25,11 @@ export const viteConfig = {
       clientFiles: [resolve(fileURLToPath(import.meta.url), '../components/Viewer.vue')]
     }
   }
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@use "/.vitepress/theme/style/theme.scss" as *;`
+  //     }
+  //   }
+  // }
 }
