@@ -1,8 +1,14 @@
-import Theme from 'vitepress/theme'
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import DemoLayout from './components/DemoLayout.vue'
 
-import './css/var.css'
-import './css/style.css'
+import './style/var.css'
+import './style/style.css'
+import './style/main.scss'
 
 export default {
-  ...Theme
-}
+  extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('DemoLayout', DemoLayout)
+  }
+} satisfies Theme

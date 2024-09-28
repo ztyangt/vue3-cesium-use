@@ -1,6 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": [
+    "globals.d.ts",
     "src/packages/**/*.ts",
     "src/packages/**/*.d.ts",
     "src/packages/**/*.tsx",

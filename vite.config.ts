@@ -10,6 +10,8 @@ import copy from 'rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
 import pkg from './src/packages/package.json'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ArcoResolver } from 'unplugin-vue-components/resolvers'
 import cesium from 'vite-plugin-cesium'
 
 // @ts-ignore
