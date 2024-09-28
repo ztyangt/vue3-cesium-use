@@ -8,7 +8,7 @@ import postcss from 'rollup-plugin-postcss'
 import autoprefixer from 'autoprefixer'
 import copy from 'rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
-import pkg from './packages/package.json'
+import pkg from './src/packages/package.json'
 import AutoImport from 'unplugin-auto-import/vite'
 import cesium from 'vite-plugin-cesium'
 

@@ -1,12 +1,19 @@
 import { defineConfig } from 'vitepress'
+import { viteConfig } from './config/vite'
+import { sidebarConfig } from './config/sidebar'
+import { markdownConfig } from './config/markdown'
+import { rewritesConfig } from './config/rewrites'
+import { searchConfig } from './config/search'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   outDir: '../dist-docs',
   lang: 'zh-CN',
   title: 'vue3-cesium-use',
+  srcDir: 'src',
   // description: '基于vue3的CesiumJS开发工具库',
   head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.ico' }]],
+  rewrites: rewritesConfig,
   themeConfig: {
     logo: '/logo.svg',
 
@@ -37,28 +44,9 @@ export default defineConfig({
       { text: '指南', link: '/' }
     ],
 
-    sidebar: [
-      {
-        text: '开始',
-        items: [
-          { text: '项目简介', link: '/start/about' },
-          { text: '快速开始', link: '/start/usage' }
-        ]
-      },
-      {
-        text: '函数'
-      },
-      {
-        text: '组件'
-      },
-      {
-        text: '工具'
-      }
-    ],
+    sidebar: sidebarConfig,
 
-    search: {
-      provider: 'local'
-    },
+    search: searchConfig,
 
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
@@ -70,5 +58,8 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://example.com'
-  }
+  },
+  markdown: markdownConfig,
+
+  vite: viteConfig
 })

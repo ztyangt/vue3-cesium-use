@@ -1,21 +1,21 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.d.ts",
-    "packages/**/*.tsx",
-    "packages/**/*.vue",
-    "shared/**/*.ts",
+    "src/packages/**/*.ts",
+    "src/packages/**/*.d.ts",
+    "src/packages/**/*.tsx",
+    "src/packages/**/*.vue",
+    "src/shared/**/*.ts",
     "unplugin/auto-imports.d.ts"
   ],
-  "exclude": ["packages/**/__tests__/*", "demo", "tsc-types"],
+  "exclude": ["src/packages/**/__tests__/*", "src/demo", "tsc-types"],
   "compilerOptions": {
     "composite": true,
 
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["packages/*"]
+      "@/*": ["src/packages/*"]
     }
   }
 }

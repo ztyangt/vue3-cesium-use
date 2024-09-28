@@ -17,9 +17,9 @@
     "type:check": "vue-tsc --noEmit --allowImportingTsExtensions && tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "docs:dev": "vitepress dev docs --port 8000 --host 0.0.0.0",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 9000"
+    "docs:dev": "vitepress dev --port 8000 --host 0.0.0.0",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview --port 9000"
   },
   "dependencies": {
     "cesium": "^1.121.1",
@@ -43,6 +43,8 @@
     "eslint-plugin-vue": "^9.23.0",
     "esno": "^4.7.0",
     "jsdom": "^24.1.0",
+    "markdown-it-custom-attrs": "^1.0.2",
+    "markdown-it-mathjax3": "^4.3.2",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
     "rollup-plugin-copy": "^3.5.0",

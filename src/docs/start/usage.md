@@ -21,8 +21,6 @@ $ pnpm install vue3-cesium-use
 ```sh [yarn]
 $ yarn install vue3-cesium-use
 ```
-
-
 :::
 
 ## 使用示例
