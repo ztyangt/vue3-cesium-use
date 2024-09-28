@@ -34,6 +34,9 @@ const { toggle, isFullscreen } = useFullscreen(box)
 <style lang="scss">
 .demo-block-wrap {
   border: 1px solid var(--border-color);
+  .demo-slot-wrap {
+    border-top: 1px solid var(--border-color);
+  }
 
   .demo-btn {
     cursor: pointer;

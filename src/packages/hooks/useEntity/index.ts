@@ -1,1 +1,3 @@
-export const usePoint = () => {}
+import { usePoint } from './point'
+
+export { usePoint }

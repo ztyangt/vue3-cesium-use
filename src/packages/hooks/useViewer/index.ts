@@ -8,7 +8,7 @@ import {
   provide,
   ref,
   shallowRef,
-  toValue,
+  unref,
   inject
 } from 'vue'
 
@@ -44,6 +44,13 @@ export const provideViewer = (fn: () => Viewer | PromiseLike<Viewer>) => {
   }
 }
 
-export const getViewer = () => {
-  return toValue(inject(CESIUM_VIEWER, undefined))
+export const getViewer = (): Viewer => {
+  const viewerInject = unref(inject(CESIUM_VIEWER, undefined))
+  if (!viewerInject) {
+    throw new Error(
+      'Failed to get viewer because viewer is undefined now.Failed to get viewer because viewer is undefined now.'
+    )
+  }
+
+  return viewerInject
 }

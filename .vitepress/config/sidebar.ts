@@ -8,14 +8,10 @@ export const sidebarConfig = [
   },
   {
     text: '组合函数',
-    // items: composablesList.map((dir) => ({
-    //   text: dir,
-    //   link: `/zh/composables/${dir}.md`
-    // }))
-    // items: [{ text: 'useViewer', link: '../../../packages/hooks/useViewer/index.md' }]
-    // items: [{ text: 'useViewer', link: '/hooks/userViewer.md' }]
-    items: [{ text: 'useViewer', link: '/packages/hooks/useViewer/' }]
-    // items: [{ text: 'useViewer', link: 'packages/hooks/useViewer/index.md' }]
+    items: [
+      { text: 'useViewer', link: '/packages/hooks/useViewer/' },
+      { text: 'useEntity', link: '/packages/hooks/useEntity/' }
+    ]
   },
   {
     text: '功能组件'

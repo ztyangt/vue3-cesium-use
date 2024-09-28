@@ -21,7 +21,8 @@ import { terser } from 'rollup-plugin-terser'
 export default defineConfig({
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./packages', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '~/': `${path.resolve(__dirname, 'src')}/`
     }
   },
   server: {
@@ -30,12 +31,12 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    AutoImport({
-      // imports: ['vue'],
-      dts: 'unplugin/auto-imports.d.ts',
-      dirs: ['packages/tools', 'packages/hooks/**/', 'shared/utils'],
-      resolvers: []
-    }),
+    // AutoImport({
+    //   // imports: ['vue'],
+    //   dts: 'unplugin/auto-imports.d.ts',
+    //   dirs: ['packages/tools', 'packages/hooks/**/', 'shared/utils'],
+    //   resolvers: []
+    // }),
     cesium({
       rebuildCesium: true
     }),
